@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dimgray;
+        }
+        header{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+        main{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px 40px;
+        }
+        nav{
+            background-color: rgb(83, 82, 82);
+            padding: 5px;
+            box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.315) black;
+        }
+        nav>a{
+            margin-right: 10px;
+            color: white;
+            text-decoration: none;
+        }
+        nav>a:hover{
+            color: black;
+            text-decoration: underline;
+        }
+        section{
+            background-color: lightgray;
+            padding: 10px;
+        }
+        article>aside{
+            width: 230px;
+            background-color: rgb(126, 126, 126);
+        }
+        article>aside>p>a{
+            color: black;
+            text-decoration: none;
+        }
+        article>aside>p>a:hover{
+            text-decoration: underline;
+            color: white;
+            background-color: black;
+        }
+        footer{
+            margin: 10px;
+            padding: 4px;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        footer>p{
+            margin: 0px;
+        }
+        footer>p>a{
+            color: rgb(84, 55, 252);
+            text-decoration: none;
+        }
+        footer>p>a:hover{
+            color: white;
+            text-decoration: underline;
+            background-color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>    
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    
+    <main>
+        <p>Eleições políticas</p>
+        <section id="assuntos">
+
+        </section>
+        <section id="noticias">
+            <article>
+                <h2>Noticia sobre o Brasil</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi, ex? Repellat hic, aspernatur error beatae inventore, accusamus mollitia, necessitatibus in quam perspiciatis delectus natus! Eius dolor velit praesentium pariatur totam!</p>
+                <aside>
+                    <p>Artigo escrito por <a href="#">Jose da Silva</a></p>
+                </aside>
+            </article>
+            <article>
+
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Site desenvolvido por <a href="#">Guilherme George</a></p>
+    </footer>
+    <div class="bola">
+
+    </div>
+</body>
+</html>
