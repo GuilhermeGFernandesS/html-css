@@ -6,22 +6,41 @@
     <title>Tabelas</title>
     <style>
         body{
+
             font-family: Arial, Helvetica, sans-serif;
         }
         table{
+            position: relative; /*Obrigatorio*/
             border-collapse: collapse;
             width: 500px;
         }
-        td, th{
+        tbody > tr:nth-child(odd){ /*2n-1*/
+            background-color: white;
+        }
+        tbody > tr:nth-child(even) /*2n*/{
+            background-color: lightgray;
+        }
+         td, th{
             border: 1px solid black;
             padding: 10px;
         }
+        thead > tr > th{ /*Utilizar apenas em tabelas GRANDES, com muitas linhas e informações*/
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+        }
         thead ,tfoot{
-            background-color: gray;
+            background-color: #383838;
             color: white;
         }
         .num{
             text-align: right;
+        }
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
         }
     </style>
 </head>
@@ -30,6 +49,7 @@
     <!--
     Anatomia para tabelas GRANDES
     TABLE
+        CAPTION: Legenda da tabela
         THEAD
             TR, TD, TH
         TBODY
@@ -41,7 +61,7 @@
         <thead>
             <tr>
                 <th scope="col">Estado</th>
-                <th scope="col">População</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -167,11 +187,19 @@
         </tbody>      
     <tfoot>
         <tr>
-            <th>Total de Habitantes</th>
-            <td>0000</td>
+            <th scope="row">Total de Habitantes</th>
+            <td class="num">210.161.271</td>
         </tr>
     </tfoot>
         <caption>População das Unidades Federativas</caption>
     </table>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia qui at, quibusdam eligendi ex, nobis quaerat vero tempore officiis repudiandae unde corrupti ipsam dicta illo, minima natus sapiente. Sapiente, eveniet?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla exercitationem distinctio, similique totam autem saepe facere. Unde suscipit, harum, amet sit voluptas, saepe odit fugiat eius laudantium perspiciatis ratione facilis!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore commodi doloribus officiis sit odit consectetur nulla sint impedit voluptate vitae exercitationem a ex, non dolorem deserunt eos natus veniam saepe.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia qui at, quibusdam eligendi ex, nobis quaerat vero tempore officiis repudiandae unde corrupti ipsam dicta illo, minima natus sapiente. Sapiente, eveniet?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla exercitationem distinctio, similique totam autem saepe facere. Unde suscipit, harum, amet sit voluptas, saepe odit fugiat eius laudantium perspiciatis ratione facilis!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore commodi doloribus officiis sit odit consectetur nulla sint impedit voluptate vitae exercitationem a ex, non dolorem deserunt eos natus veniam saepe.</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia qui at, quibusdam eligendi ex, nobis quaerat vero tempore officiis repudiandae unde corrupti ipsam dicta illo, minima natus sapiente. Sapiente, eveniet?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla exercitationem distinctio, similique totam autem saepe facere. Unde suscipit, harum, amet sit voluptas, saepe odit fugiat eius laudantium perspiciatis ratione facilis!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore commodi doloribus officiis sit odit consectetur nulla sint impedit voluptate vitae exercitationem a ex, non dolorem deserunt eos natus veniam saepe.</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia qui at, quibusdam eligendi ex, nobis quaerat vero tempore officiis repudiandae unde corrupti ipsam dicta illo, minima natus sapiente. Sapiente, eveniet?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla exercitationem distinctio, similique totam autem saepe facere. Unde suscipit, harum, amet sit voluptas, saepe odit fugiat eius laudantium perspiciatis ratione facilis!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore commodi doloribus officiis sit odit consectetur nulla sint impedit voluptate vitae exercitationem a ex, non dolorem deserunt eos natus veniam saepe.</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia qui at, quibusdam eligendi ex, nobis quaerat vero tempore officiis repudiandae unde corrupti ipsam dicta illo, minima natus sapiente. Sapiente, eveniet?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla exercitationem distinctio, similique totam autem saepe facere. Unde suscipit, harum, amet sit voluptas, saepe odit fugiat eius laudantium perspiciatis ratione facilis!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore commodi doloribus officiis sit odit consectetur nulla sint impedit voluptate vitae exercitationem a ex, non dolorem deserunt eos natus veniam saepe.</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia qui at, quibusdam eligendi ex, nobis quaerat vero tempore officiis repudiandae unde corrupti ipsam dicta illo, minima natus sapiente. Sapiente, eveniet?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla exercitationem distinctio, similique totam autem saepe facere. Unde suscipit, harum, amet sit voluptas, saepe odit fugiat eius laudantium perspiciatis ratione facilis!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore commodi doloribus officiis sit odit consectetur nulla sint impedit voluptate vitae exercitationem a ex, non dolorem deserunt eos natus veniam saepe.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia qui at, quibusdam eligendi ex, nobis quaerat vero tempore officiis repudiandae unde corrupti ipsam dicta illo, minima natus sapiente. Sapiente, eveniet?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla exercitationem distinctio, similique totam autem saepe facere. Unde suscipit, harum, amet sit voluptas, saepe odit fugiat eius laudantium perspiciatis ratione facilis!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore commodi doloribus officiis sit odit consectetur nulla sint impedit voluptate vitae exercitationem a ex, non dolorem deserunt eos natus veniam saepe.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia qui at, quibusdam eligendi ex, nobis quaerat vero tempore officiis repudiandae unde corrupti ipsam dicta illo, minima natus sapiente. Sapiente, eveniet?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla exercitationem distinctio, similique totam autem saepe facere. Unde suscipit, harum, amet sit voluptas, saepe odit fugiat eius laudantium perspiciatis ratione facilis!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore commodi doloribus officiis sit odit consectetur nulla sint impedit voluptate vitae exercitationem a ex, non dolorem deserunt eos natus veniam saepe.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia qui at, quibusdam eligendi ex, nobis quaerat vero tempore officiis repudiandae unde corrupti ipsam dicta illo, minima natus sapiente. Sapiente, eveniet?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla exercitationem distinctio, similique totam autem saepe facere. Unde suscipit, harum, amet sit voluptas, saepe odit fugiat eius laudantium perspiciatis ratione facilis!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore commodi doloribus officiis sit odit consectetur nulla sint impedit voluptate vitae exercitationem a ex, non dolorem deserunt eos natus veniam saepe.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia qui at, quibusdam eligendi ex, nobis quaerat vero tempore officiis repudiandae unde corrupti ipsam dicta illo, minima natus sapiente. Sapiente, eveniet?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla exercitationem distinctio, similique totam autem saepe facere. Unde suscipit, harum, amet sit voluptas, saepe odit fugiat eius laudantium perspiciatis ratione facilis!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore commodi doloribus officiis sit odit consectetur nulla sint impedit voluptate vitae exercitationem a ex, non dolorem deserunt eos natus veniam saepe.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia qui at, quibusdam eligendi ex, nobis quaerat vero tempore officiis repudiandae unde corrupti ipsam dicta illo, minima natus sapiente. Sapiente, eveniet?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla exercitationem distinctio, similique totam autem saepe facere. Unde suscipit, harum, amet sit voluptas, saepe odit fugiat eius laudantium perspiciatis ratione facilis!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore commodi doloribus officiis sit odit consectetur nulla sint impedit voluptate vitae exercitationem a ex, non dolorem deserunt eos natus veniam saepe.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia qui at, quibusdam eligendi ex, nobis quaerat vero tempore officiis repudiandae unde corrupti ipsam dicta illo, minima natus sapiente. Sapiente, eveniet?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla exercitationem distinctio, similique totam autem saepe facere. Unde suscipit, harum, amet sit voluptas, saepe odit fugiat eius laudantium perspiciatis ratione facilis!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore commodi doloribus officiis sit odit consectetur nulla sint impedit voluptate vitae exercitationem a ex, non dolorem deserunt eos natus veniam saepe.</p>
 </body>
 </html>
